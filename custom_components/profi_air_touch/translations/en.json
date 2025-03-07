@@ -1,0 +1,15 @@
+{
+    "title": "Fränkische Profi-Air 250/400 Touch",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Configure ventilation system",
+                "description": "Enter a name and the IP address for the ventilation system",
+                "data": {
+                    "name": "Name of the ventilation system",
+                    "host": "IP address of the ventilation system"
+                }
+            }
+        }
+    }
+}

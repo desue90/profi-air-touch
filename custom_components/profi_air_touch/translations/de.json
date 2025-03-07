@@ -1,0 +1,15 @@
+{
+    "title": "Fränkische Profi-Air 250/400 Touch",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Lüftungsanlage konfigurieren",
+                "description": "Gib einen Namen und die IP-Adresse für die Lüftungsanlage ein",
+                "data": {
+                    "name": "Name der Anlage",
+                    "host": "IP-Adresse der Anlage"
+                }
+            }
+        }
+    }
+}
