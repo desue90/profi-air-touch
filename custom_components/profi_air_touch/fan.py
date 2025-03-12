@@ -29,7 +29,6 @@ class ProfiAirTouchFan(FanEntity):
         self._api = ProfiAirTouchAPI(host)
         self._attr_preset_modes = list(PRESET_MODES.values())
         self._attr_preset_mode = "Feuchteschutz"
-#        self._attr_is_on = True
 
     @property
     def device_info(self):
