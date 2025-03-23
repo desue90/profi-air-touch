@@ -1,0 +1,19 @@
+{
+    "entity": {
+        "fan": {
+            "ventilation_level": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "default": "mdi:fan",
+                        "state": {
+                            "feuchteschutz": "mdi:fan-speed-1",
+                            "abwesend": "mdi:fan-speed-2",
+                            "wohnen": "mdi:fan-speed-3",
+                            "party": "mdi:rocket:launch"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

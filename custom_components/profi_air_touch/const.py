@@ -2,11 +2,12 @@ DOMAIN = "profi_air_touch"
 PLATFORMS = ["fan"]
 
 CONF_HOST = "host"
-CONF_NAME = "name"
+
+DEVICE_ID = f"{DOMAIN}_ventilation_system"
 
 PRESET_MODES = {
-    1: "Feuchteschutz",
-    2: "Abwesend",
-    3: "Wohnen",
-    4: "Party"
+    1: "feuchteschutz",
+    2: "abwesend",
+    3: "wohnen",
+    4: "party"
 }
