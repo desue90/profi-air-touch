@@ -40,16 +40,17 @@ class ProfiAirTouchFan(FanEntity):
 
     async def async_set_preset_mode(self, preset_mode: str):
         if preset_mode not in self._attr_preset_modes:
-            _LOGGER.warning("Ungültiger Preset-Modus: %s", preset_mode)
-            return  # Ignoriere ungültige Werte
-
-        # Suche den entsprechenden Schlüssel aus PRESET_MODES für den übergebenen preset_mode
-        key = next((k for k, v in PRESET_MODES.items() if v == preset_mode), None)
-        if key is None:
+            _LOGGER.warning("Unvalid Preset-Mode: %s", preset_mode)
             return
 
-        # Führe die API-Anfrage aus, um den Lüftermodus zu setzen
-        success = await self.hass.async_add_executor_job(self._api.set_fan_preset, key)
+        # Search for key from PRESET_MODES for the entered preset_mode
+        key = next((k for k, v in PRESET_MODES.items() if v == preset_mode), None)
+        if key is None:
+            _LOGGER.warning("Unvalid Preset-Mode: %s", preset_mode)
+            return
+
+        # Perform the API-Request, to set the preset mode
+        success = await self._api.async_set_fan_preset(key)
         if success:
             self._attr_preset_mode = preset_mode
             self.async_write_ha_state()
