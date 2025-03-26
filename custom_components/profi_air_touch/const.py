@@ -1,5 +1,8 @@
 DOMAIN = "profi_air_touch"
-PLATFORMS = ["fan"]
+PLATFORMS = [
+    "fan",
+    "sensor"
+    ]
 
 CONF_HOST = "host"
 
