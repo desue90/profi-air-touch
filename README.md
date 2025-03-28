@@ -15,6 +15,8 @@ This integration allows you to set the ventilation level of your controlled dome
 
 `{preset}` = level number 1 to 4
 
+In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation system.
+
 **Remark on level 4 - Party:**
 The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page.
 
@@ -51,7 +53,7 @@ You can choose to deploy it with [HACS](#hacs) or [manually](#manual)
 1. Restart Home Assistant
 2. After restart go to Settings > Devices & services
 3. Click [ADD INTEGRATION](https://my.home-assistant.io/redirect/config_flow_start/?domain=profi_air_touch) and select "Profi-Air Touch"
-4. Enter a name and the IP address for the ventilation system
+4. Enter the IP address of the ventilation system
 5. Select an area for the ventilation system and finisch the configuration
 
 You now have an entity you can use to set 1 of the 4 available ventilation levels if you meet the [requirements](#requirements) listed above. Therefor add any card in the [dashboard](#dashboard) or create [automations](#automation), e.g. to control the timing of the different levels
@@ -81,13 +83,13 @@ features:
       - Wohnen
       - Party
 type: tile
-entity: fan.profi_air_touch
+entity: fan.profi_air_touch_luftungsstufe
 features_position: bottom
 vertical: false
 hide_state: true
 show_entity_picture: false
 ```
-9. Make sure you have the correct entity name in the line `entity:` if you gave it a different name
+9. Make sure you have the correct entity if yours has a different ID
 10. Save it
 
 ## Automation
@@ -106,7 +108,7 @@ You can choose any trigger and conditions you need. Let's say you want to set th
 3. Add Condition > Time and Place > Time
 4. Leave the time fields empty and add only the desired weekdays on which the automation should run
 5. Add Action > Fan > Set Preset Mode
-6. Choose your new entity, e.g. "fan.profi_air_touch"
+6. Choose your new entity, e.g. "fan.profi_air_touch_luftungsstufe"
 7. Choose one of the following 4 preset modes. You must specify the preset mode as text:
     - Level 1:  `Feuchteschutz`
     - Level 2:  `Abwesend`
@@ -140,7 +142,7 @@ actions:
     data:
       preset_mode: Feuchteschutz
     target:
-      entity_id: fan.profi_air_touch
+      entity_id: fan.profi_air_touch_luftungsstufe
 mode: single
 ```
 3. To customize the automation you can change the following lines:

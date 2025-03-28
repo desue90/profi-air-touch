@@ -28,8 +28,17 @@
             } 
         },
         "sensor": {
-            "outside_air_temperature": {
+            "fresh_air_temperature": {
                 "name": "Aussenluft Temperatur"
+            },
+            "supply_air_temperature": {
+                "name": "Zuluft Temperatur"
+            },
+            "extract_air_temperature": {
+                "name": "Abluft Temperatur"
+            },
+            "exhaust_air_temperature": {
+                "name": "Fortluft Temperatur"
             }
         }
     }

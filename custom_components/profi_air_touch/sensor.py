@@ -5,34 +5,47 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-
-from .const import DOMAIN, CONF_HOST, DEVICE_ID
 from .data_fetcher import ProfiAirTouchData
+from .const import DOMAIN, CONF_HOST, DEVICE_ID
+
+# Constants for the sensors
+SENSOR_FRESH_AIR = "fresh_air_temperature"
+SENSOR_SUPPLY_AIR = "supply_air_temperature"
+SENSOR_EXTRACT_AIR = "extract_air_temperature"
+SENSOR_EXHAUST_AIR = "exhaust_air_temperature"
+
+# Constants for the XML-Tags for the sensor data
+XML_TAG_FRESH_AIR = "aul0"
+XML_TAG_SUPPLY_AIR = "zul0"
+XML_TAG_EXTRACT_AIR = "abl0"
+XML_TAG_EXHAUST_AIR = "fol0"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
     config = hass.data[DOMAIN][entry.entry_id]
     host = config[CONF_HOST]
     session = async_get_clientsession(hass)
     data_handler = ProfiAirTouchData(f"http://{host}/status.xml", session)
+    # Create sensor entities
+    async_add_entities([
+        TemperatureSensor(data_handler, SENSOR_FRESH_AIR, XML_TAG_FRESH_AIR),
+        TemperatureSensor(data_handler, SENSOR_SUPPLY_AIR, XML_TAG_SUPPLY_AIR),
+        TemperatureSensor(data_handler, SENSOR_EXTRACT_AIR, XML_TAG_EXTRACT_AIR),
+        TemperatureSensor(data_handler, SENSOR_EXHAUST_AIR, XML_TAG_EXHAUST_AIR),
+    ], True)
 
-    # Update data bevor creating entity
-    await data_handler.async_update()
+class TemperatureSensor(SensorEntity):
 
-    async_add_entities([OutsideAirTemperatureSensor(data_handler)], True)
-
-class OutsideAirTemperatureSensor(SensorEntity):
-
+    _attr_has_entity_name = True
     _attr_device_class = SensorDeviceClass.TEMPERATURE
     _attr_state_class = SensorStateClass.MEASUREMENT
     _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
-
-    _attr_has_entity_name = True
     
-    def __init__(self, data_handler):
+    def __init__(self, data_handler, sensor_id, xml_tag):
+        self._attr_unique_id = f"{DOMAIN}_{sensor_id}"
+        self._attr_translation_key = sensor_id
         self._data_handler = data_handler
-        self._attr_translation_key = "outside_air_temperature"
-        self._attr_unique_id = f"{DOMAIN}_outside_air_temperature"
-        self._attr_native_value = self._data_handler.data.get("aul0")
+        self._xml_tag = xml_tag 
+        self._attr_native_value = self._data_handler.data.get(self._xml_tag)
 
     @property
     def device_info(self) -> DeviceInfo:
@@ -42,6 +55,7 @@ class OutsideAirTemperatureSensor(SensorEntity):
             manufacturer="Fränkische",
             model="Profi-Air 250/400 Touch",
         )
-    
+
     async def async_update(self):
-        await self._data_handler.async_update()
+        await self._data_handler.update_status_xml()
+        self._attr_native_value = self._data_handler.data.get(self._xml_tag)

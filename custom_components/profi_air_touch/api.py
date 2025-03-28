@@ -1,4 +1,7 @@
 import aiohttp
+import logging
+
+_LOGGER = logging.getLogger(__name__)
 
 class ProfiAirTouchAPI:
     def __init__(self, host: str):
@@ -10,6 +13,11 @@ class ProfiAirTouchAPI:
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(url, timeout=5) as response:
-                    return response.status == 200
-        except aiohttp.ClientError:
+                    if response.status == 200:
+                        return True
+                    else:
+                        _LOGGER.warning("Unexpected response code: %d", response.status)
+                        return False
+        except aiohttp.ClientError as e:
+            _LOGGER.error("Error setting preset mode: %s", e)
             return False

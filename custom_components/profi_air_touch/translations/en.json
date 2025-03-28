@@ -28,8 +28,17 @@
             } 
         },
         "sensor": {
-            "outside_air_temperature": {
-                "name": "Outside air temperature"
+            "fresh_air_temperature": {
+                "name": "Fresh air temperatur"
+            },
+            "supply_air_temperature": {
+                "name": "Supply air temperatur"
+            },
+            "extract_air_temperature": {
+                "name": "Extract air temperatur"
+            },
+            "exhaust_air_temperature": {
+                "name": "Exhaust air temperatur"
             }
         }
     }

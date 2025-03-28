@@ -1,7 +1,7 @@
 {
   "domain": "profi_air_touch",
   "name": "Profi-Air Touch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "integration_type": "device",
   "documentation": "https://github.com/desue90/profi-air-touch",
   "issue_tracker": "https://github.com/desue90/profi-air-touch/issues",
@@ -9,5 +9,5 @@
   "codeowners": ["@desue90"],
   "config_flow": true,
   "requirements": [],
-  "iot_class": "assumed_state"
+  "iot_class": "local_polling"
 }
