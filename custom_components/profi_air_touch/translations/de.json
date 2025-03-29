@@ -4,11 +4,41 @@
         "step": {
             "user": {
                 "title": "Lüftungsanlage konfigurieren",
-                "description": "Gib einen Namen und die IP-Adresse für die Lüftungsanlage ein",
+                "description": "Gib die IP-Adresse der Lüftungsanlage ein",
                 "data": {
-                    "name": "Name der Anlage",
                     "host": "IP-Adresse der Anlage"
                 }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "ventilation_system": {
+                "name": "Lüftungsanlage",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "low": "Feuchteschutz",
+                            "medium": "Abwesend",
+                            "high": "Wohnen",
+                            "boost": "Party"
+                        }
+                    }
+                }
+            } 
+        },
+        "sensor": {
+            "fresh_air_temperature": {
+                "name": "Aussenluft Temperatur"
+            },
+            "supply_air_temperature": {
+                "name": "Zuluft Temperatur"
+            },
+            "extract_air_temperature": {
+                "name": "Abluft Temperatur"
+            },
+            "exhaust_air_temperature": {
+                "name": "Fortluft Temperatur"
             }
         }
     }

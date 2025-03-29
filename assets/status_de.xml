@@ -1,0 +1,332 @@
+<response>
+<stufe1>1</stufe1>
+<stufe2>0</stufe2>
+<stufe3>0</stufe3>
+<stufe4>0</stufe4>
+<aktuell0>Stufe1 Feuchteschutz</aktuell0>
+<control0>manuelle Stufenwahl</control0>
+<bypass>Auto: Zu   </bypass>
+<SprachWahl>Deutsch        </SprachWahl>
+<partytime>120</partytime>
+<BipaAutAUL> 13.1</BipaAutAUL>
+<BipaAutABL> 22.0</BipaAutABL>
+<installtyp>Eigenheim</installtyp>
+<vorheiz>Passiv </vorheiz>
+<nachlauf>5</nachlauf>
+<safety>Nicht aktiv </safety>
+<S1amb0>0</S1amb0>
+<S2amb0>0</S2amb0>
+<S3amb0>0</S3amb0>
+<S4amb0>0</S4amb0>
+<sensortyp1>Nicht aktiv </sensortyp1>
+<sensortyp2>Nicht aktiv </sensortyp2>
+<sensortyp3>Nicht aktiv </sensortyp3>
+<sensortyp4>Nicht aktiv </sensortyp4>
+<abl0> 18.4</abl0>
+<zul0> 16.7</zul0>
+<aul0> 10.8</aul0>
+<fol0> 11.3</fol0>
+<DiIn1>Aus</DiIn1>
+<DiIn2>Aus</DiIn2>
+<DiIn3>Ein</DiIn3>
+<MoStZlUm>1030</MoStZlUm>
+<MoStZlVo>22</MoStZlVo>
+<MoStAlUm>854</MoStAlUm>
+<MoStAlVo>19</MoStAlVo>
+<kor1>     00</kor1>
+<kor2>     00</kor2>
+<kor3>     00</kor3>
+<kor4>     00</kor4>
+<filtertime>190</filtertime>
+<rest_time>87</rest_time>
+<cannumber>1</cannumber>
+<passiv>Aus</passiv>
+<PassivHE> 16.0</PassivHE>
+<PassivHA> 18.0</PassivHA>
+<BsSt1>34150</BsSt1>
+<BsSt2>38044</BsSt2>
+<BsSt3>67931</BsSt3>
+<BsSt4>214</BsSt4>
+<BsFs>226</BsFs>
+<BsVhr>0</BsVhr>
+<sensor0>Aus</sensor0>
+<filter0>Filter ersetzt </filter0>
+<st1z>22</st1z>
+<st1a>19</st1a>
+<st2z>38</st2z>
+<st2a>32</st2a>
+<st3z>55</st3z>
+<st3a>47</st3a>
+<st4z>71</st4z>
+<st4a>61</st4a>
+<enocean>-</enocean>
+<on_email_off>Aus</on_email_off>
+<name_email>?</name_email>
+<strasse_email>?</strasse_email>
+<plz_email>?</plz_email>
+<ort_email>?</ort_email>
+<tel_email>?</tel_email>
+<e_kunde_email>?</e_kunde_email>
+<e_monteur_email>?</e_monteur_email>
+<soze>Sommerzeit   </soze>
+<time>13:55:17</time>
+<date>Mi, 26.03.2025</date>
+<meldung>HA=Hand  </meldung>
+<events>n/a</events>
+<config_ip>192.168.90.53</config_ip>
+<config_mac>00:1E:C0:C8:40:5F</config_mac>
+<grundst>Stufe 3  </grundst>
+<st1Z_f>18</st1Z_f>
+<st1A_f>100</st1A_f>
+<st2Z_f>18</st2Z_f>
+<st2A_f>100</st2A_f>
+<st3Z_f>18</st3Z_f>
+<st3A_f>100</st3A_f>
+<st4Z_f>18</st4Z_f>
+<st4A_f>100</st4A_f>
+<vhrtyp>Test VHR Aus</vhrtyp>
+<korr_f>99</korr_f>
+<korr_co>99</korr_co>
+<s_feu_3>60</s_feu_3>
+<s_co_3>1000</s_co_3>
+<s_feu_4>85</s_feu_4>
+<s_co_4>1500</s_co_4>
+<party_von>10</party_von>
+<party_bis>120</party_bis>
+<bp_temp>20</bp_temp>
+<fs_para1>5</fs_para1>
+<fs_para2>     00</fs_para2>
+<fs_para3>1</fs_para3>
+<fs_para4>177</fs_para4>
+<fs_para5>167</fs_para5>
+<fs_para6>150</fs_para6>
+<fs_para7>100</fs_para7>
+<fs_para8>100</fs_para8>
+<fs_para9>27</fs_para9>
+<fs_para10>25</fs_para10>
+<fs_para11>60</fs_para11>
+<fs_para12>60</fs_para12>
+<fs_para13>5</fs_para13>
+<fs_para14>     00</fs_para14>
+<fs_para15>+0.7</fs_para15>
+<fs_para16>70</fs_para16>
+<fs_para17>10</fs_para17>
+<fs_para18>60</fs_para18>
+<fs_para19>60</fs_para19>
+<fs_para20>60</fs_para20>
+<prg1>Stufe 1  </prg1>
+<prg_start1>10:00</prg_start1>
+<prg_stop1>18:00</prg_stop1>
+<prg_wota1>Mo,Di,Mi,Do,Fr</prg_wota1>
+<prg2>Stufe 1  </prg2>
+<prg_start2>11:00</prg_start2>
+<prg_stop2>17:00</prg_stop2>
+<prg_wota2>Sa,So</prg_wota2>
+<prg3>Stufe 2  </prg3>
+<prg_start3>18:00</prg_start3>
+<prg_stop3>20:00</prg_stop3>
+<prg_wota3>Mo,Di,Mi,Do,Fr</prg_wota3>
+<prg4>Stufe 2  </prg4>
+<prg_start4>08:00</prg_start4>
+<prg_stop4>10:00</prg_stop4>
+<prg_wota4>Mo,Di,Mi,Do,Fr</prg_wota4>
+<prg5>Stufe 2  </prg5>
+<prg_start5>08:00</prg_start5>
+<prg_stop5>11:00</prg_stop5>
+<prg_wota5>Sa,So</prg_wota5>
+<prg6>Stufe 2  </prg6>
+<prg_start6>17:00</prg_start6>
+<prg_stop6>19:00</prg_stop6>
+<prg_wota6>Sa,So</prg_wota6>
+<prg7>Aus</prg7>
+<prg_start7>00:00</prg_start7>
+<prg_stop7>00:00</prg_stop7>
+<prg_wota7>-</prg_wota7>
+<prg8>Aus</prg8>
+<prg_start8>00:00</prg_start8>
+<prg_stop8>00:00</prg_stop8>
+<prg_wota8>-</prg_wota8>
+<prg9>Aus</prg9>
+<prg_start9>00:00</prg_start9>
+<prg_stop9>00:00</prg_stop9>
+<prg_wota9>-</prg_wota9>
+<prg10>Aus</prg10>
+<prg_start10>00:00</prg_start10>
+<prg_stop10>00:00</prg_stop10>
+<prg_wota10>-</prg_wota10>
+<langtxt0>home</langtxt0>
+<langtxt1>Wochenplan</langtxt1>
+<langtxt2>Zeiteinstellung</langtxt2>
+<langtxt3>Setup</langtxt3>
+<langtxt4>Installateur</langtxt4>
+<langtxt5>about</langtxt5>
+<langtxt6>Steuerung   </langtxt6>
+<langtxt7>Stufe 1  </langtxt7>
+<langtxt8>Stufe 2  </langtxt8>
+<langtxt9>Stufe 3  </langtxt9>
+<langtxt10>Stufe 4  </langtxt10>
+<langtxt11>Intensivlüftung</langtxt11>
+<langtxt12>Timer</langtxt12>
+<langtxt13>Übersicht</langtxt13>
+<langtxt14>Lüftung</langtxt14>
+<langtxt15>Bypass  </langtxt15>
+<langtxt16>Abluft Temp.</langtxt16>
+<langtxt17>Zuluft Temp.</langtxt17>
+<langtxt18>Aussenluft Temp.</langtxt18>
+<langtxt19>int.Sensor 1</langtxt19>
+<langtxt20>int.Sensor 2</langtxt20>
+<langtxt21>ext.Sensor 3</langtxt21>
+<langtxt22>ext.Sensor 4</langtxt22>
+<langtxt23>Software</langtxt23>
+<langtxt24>Version</langtxt24>
+<langtxt25>Release</langtxt25>
+<langtxt26>Netzwerk</langtxt26>
+<langtxt27>IP-Adresse</langtxt27>
+<langtxt28>MAC-Adresse</langtxt28>
+<langtxt29>Programm</langtxt29>
+<langtxt30>Hand  </langtxt30>
+<langtxt31>Grundstufe  </langtxt31>
+<langtxt32>Wochen Prog.</langtxt32>
+<langtxt33>Start:  </langtxt33>
+<langtxt34>Stunde</langtxt34>
+<langtxt35>Minuten</langtxt35>
+<langtxt36>Stop:</langtxt36>
+<langtxt37>Haustyp</langtxt37>
+<langtxt38>Eigenheim</langtxt38>
+<langtxt39>Wochentage  </langtxt39>
+<langtxt40>Lokale Zeit im Browser</langtxt40>
+<langtxt41>Client Systemzeit</langtxt41>
+<langtxt42>Client Datum</langtxt42>
+<langtxt43>Zeit Lüftungssteuerung</langtxt43>
+<langtxt44>Zeit setzen</langtxt44>
+<langtxt45>Mietwohnung</langtxt45>
+<langtxt46>Vorheizregister</langtxt46>
+<langtxt47>Datum Lüftungssteuerung</langtxt47>
+<langtxt48>Datum setzen</langtxt48>
+<langtxt49>Tag  </langtxt49>
+<langtxt50>Monat  </langtxt50>
+<langtxt51>Jahr  </langtxt51>
+<langtxt52>Aktiv  </langtxt52>
+<langtxt53>1=Mo, 2=Di, 3=Mi, 4=Do, 5=Fr, 6=Sa, 7=So</langtxt53>
+<langtxt54>Sommerzeit   </langtxt54>
+<langtxt55>Winterzeit   </langtxt55>
+<langtxt56>Sommerzeit +1h</langtxt56>
+<langtxt57>Nachlauf Party-Stufe</langtxt57>
+<langtxt58>neuer Wert</langtxt58>
+<langtxt59>Bypass Steuerung</langtxt59>
+<langtxt60>Man.: Offen</langtxt60>
+<langtxt61>Man.: Zu  </langtxt61>
+<langtxt62>automatisch</langtxt62>
+<langtxt63>Bypass Automat  </langtxt63>
+<langtxt64>Sprachauswahl</langtxt64>
+<langtxt65>Italienisch</langtxt65>
+<langtxt66>Deutsch</langtxt66>
+<langtxt67>Französisch</langtxt67>
+<langtxt68>Filter</langtxt68>
+<langtxt69>Externe Sensoren  </langtxt69>
+<langtxt70>Passiv </langtxt70>
+<langtxt71>Nachlaufzeit</langtxt71>
+<langtxt72>Luftmenge</langtxt72>
+<langtxt73>Zuluft     </langtxt73>
+<langtxt74>Volt</langtxt74>
+<langtxt75>Abluft     </langtxt75>
+<langtxt76>Service Aus   </langtxt76>
+<langtxt77>Mit</langtxt77>
+<langtxt78>Ohne</langtxt78>
+<langtxt79>neuer Typ</langtxt79>
+<langtxt80>Motorstatus </langtxt80>
+<langtxt81>Temperaturen</langtxt81>
+<langtxt82>Fortluft Temp.</langtxt82>
+<langtxt83>Passivhaus  </langtxt83>
+<langtxt84>Ein</langtxt84>
+<langtxt85>Aus</langtxt85>
+<langtxt86>Betriebstunden      </langtxt86>
+<langtxt87>Frostschutz </langtxt87>
+<langtxt88>Minuten</langtxt88>
+<langtxt89>neuer Wert</langtxt89>
+<langtxt90>neuer Wert</langtxt90>
+<langtxt91>Volt</langtxt91>
+<langtxt92>Volt</langtxt92>
+<langtxt93>Volt</langtxt93>
+<langtxt94>Zuluft     </langtxt94>
+<langtxt95>Volt</langtxt95>
+<langtxt96>neuer Wert</langtxt96>
+<langtxt97>Volt</langtxt97>
+<langtxt98>Abluft     </langtxt98>
+<langtxt99>Volt</langtxt99>
+<langtxt100>neuer Wert</langtxt100>
+<langtxt101>Volt</langtxt101>
+<langtxt102>Zuluft     </langtxt102>
+<langtxt103>Volt</langtxt103>
+<langtxt104>neuer Wert</langtxt104>
+<langtxt105>Volt</langtxt105>
+<langtxt106>Abluft     </langtxt106>
+<langtxt107>Volt</langtxt107>
+<langtxt108>neuer Wert</langtxt108>
+<langtxt109>Volt</langtxt109>
+<langtxt110>Zuluft     </langtxt110>
+<langtxt111>Volt</langtxt111>
+<langtxt112>neuer Wert</langtxt112>
+<langtxt113>Volt</langtxt113>
+<langtxt114>Abluft     </langtxt114>
+<langtxt115>Volt</langtxt115>
+<langtxt116>neuer Wert</langtxt116>
+<langtxt117>Volt</langtxt117>
+<langtxt118>Steuerung   </langtxt118>
+<langtxt119>Wochenplan</langtxt119>
+<langtxt120>Steuerung   </langtxt120>
+<langtxt121>Zeiteinstellung</langtxt121>
+<langtxt122>Setup</langtxt122>
+<langtxt123>Installateur</langtxt123>
+<langtxt124>Stufe 1  </langtxt124>
+<langtxt125>Stufe 2  </langtxt125>
+<langtxt126>Stufe 3  </langtxt126>
+<langtxt127>Stufe 4  </langtxt127>
+<langtxt128>neuer Typ</langtxt128>
+<langtxt129>neuer Typ</langtxt129>
+<langtxt130>neuer Typ</langtxt130>
+<langtxt131>Zuluft     </langtxt131>
+<langtxt132>Abluft     </langtxt132>
+<langtxt133>Stufe 1  </langtxt133>
+<langtxt134>Stufe 2  </langtxt134>
+<langtxt135>Stufe 3  </langtxt135>
+<langtxt136>Stufe 4  </langtxt136>
+<langtxt137>Vorheizregister</langtxt137>
+<langtxt138>Stunde</langtxt138>
+<langtxt139>Minute</langtxt139>
+<langtxt140>Status</langtxt140>
+<langtxt141>Ereignisse</langtxt141>
+<langtxt142>Fehler bestätigen</langtxt142>
+<langtxt143>min-1  </langtxt143>
+<langtxt144>Volt</langtxt144>
+<langtxt145>min-1  </langtxt145>
+<langtxt146>Volt</langtxt146>
+<langtxt147>Passivhaus  </langtxt147>
+<langtxt148>Korrektur  </langtxt148>
+<langtxt149>Abluft Temp.</langtxt149>
+<langtxt150>Zuluft Temp.</langtxt150>
+<langtxt151>Fortluft Temp.</langtxt151>
+<langtxt152>Aussenluft Temp.</langtxt152>
+<langtxt153>Fehler</langtxt153>
+<langtxt154>email</langtxt154>
+<langtxt155>Name</langtxt155>
+<langtxt156>Strasse</langtxt156>
+<langtxt157>PLZ</langtxt157>
+<langtxt158>Ort</langtxt158>
+<langtxt159>Tel</langtxt159>
+<langtxt160>email Kunde</langtxt160>
+<langtxt161>email Installateur</langtxt161>
+<langtxt162>Testemail senden</langtxt162>
+<langtxt163>Englisch</langtxt163>
+<langtxt164>Enocean</langtxt164>
+<langtxt165>S1</langtxt165>
+<langtxt166>S2</langtxt166>
+<langtxt167>S3</langtxt167>
+<langtxt168>S4</langtxt168>
+<langtxt169>CAN Nummer</langtxt169>
+<langtxt170>Flämisch</langtxt170>
+<langtxt171>Filterzeit    </langtxt171>
+<langtxt172>Restzeit</langtxt172>
+<langtxt173>Interne Sensoren  </langtxt173>
+<langtxt174>Sensoren     </langtxt174>
+</response>

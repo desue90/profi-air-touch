@@ -1,12 +1,16 @@
 DOMAIN = "profi_air_touch"
-PLATFORMS = ["fan"]
+PLATFORMS = [
+    "fan",
+    "sensor"
+    ]
 
 CONF_HOST = "host"
-CONF_NAME = "name"
+
+DEVICE_ID = f"{DOMAIN}_device"
 
 PRESET_MODES = {
-    1: "Feuchteschutz",
-    2: "Abwesend",
-    3: "Wohnen",
-    4: "Party"
+    1: "low",
+    2: "medium",
+    3: "high",
+    4: "boost"
 }

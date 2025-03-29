@@ -4,11 +4,41 @@
         "step": {
             "user": {
                 "title": "Configure ventilation system",
-                "description": "Enter a name and the IP address for the ventilation system",
+                "description": "Enter the IP address of the ventilation system",
                 "data": {
-                    "name": "Name of the ventilation system",
                     "host": "IP address of the ventilation system"
                 }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "ventilation_system": {
+                "name": "Ventilation system",
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "low": "Humidity suppression",
+                            "medium": "Absent",
+                            "high": "Living",
+                            "boost": "Party"
+                        }
+                    }
+                }
+            } 
+        },
+        "sensor": {
+            "fresh_air_temperature": {
+                "name": "Fresh air temperatur"
+            },
+            "supply_air_temperature": {
+                "name": "Supply air temperatur"
+            },
+            "extract_air_temperature": {
+                "name": "Extract air temperatur"
+            },
+            "exhaust_air_temperature": {
+                "name": "Exhaust air temperatur"
             }
         }
     }

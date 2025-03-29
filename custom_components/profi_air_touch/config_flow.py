@@ -1,7 +1,7 @@
 import voluptuous as vol
 from homeassistant import config_entries
 
-from .const import DOMAIN, CONF_HOST, CONF_NAME
+from .const import DOMAIN, CONF_HOST
 
 class ProfiAirTouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle the config flow for Profi-Air Touch"""
@@ -14,13 +14,11 @@ class ProfiAirTouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         if user_input is not None:
             host = user_input[CONF_HOST]
-            name = user_input[CONF_NAME]
 
-            return self.async_create_entry(title=name, data={CONF_HOST: host, CONF_NAME: name})
+            return self.async_create_entry(title="Profi Air Touch", data={CONF_HOST: host})
 
         DATA_SCHEMA = vol.Schema(
             {
-                vol.Required(CONF_NAME, default="Profi-Air Touch"): str,
                 vol.Required(CONF_HOST): str,
             }
         )
