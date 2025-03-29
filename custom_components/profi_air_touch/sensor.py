@@ -4,9 +4,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.device_registry import DeviceInfo
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from .data_fetcher import ProfiAirTouchData
-from .const import DOMAIN, CONF_HOST, DEVICE_ID
+from .const import DOMAIN, DEVICE_ID
 
 # Constants for the sensors
 SENSOR_FRESH_AIR = "fresh_air_temperature"
@@ -21,10 +19,7 @@ XML_TAG_EXTRACT_AIR = "abl0"
 XML_TAG_EXHAUST_AIR = "fol0"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
-    config = hass.data[DOMAIN][entry.entry_id]
-    host = config[CONF_HOST]
-    session = async_get_clientsession(hass)
-    data_handler = ProfiAirTouchData(f"http://{host}/status.xml", session)
+    data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
     # Create sensor entities
     async_add_entities([
         TemperatureSensor(data_handler, SENSOR_FRESH_AIR, XML_TAG_FRESH_AIR),
@@ -57,5 +52,4 @@ class TemperatureSensor(SensorEntity):
         )
 
     async def async_update(self):
-        await self._data_handler.update_status_xml()
         self._attr_native_value = self._data_handler.data.get(self._xml_tag)

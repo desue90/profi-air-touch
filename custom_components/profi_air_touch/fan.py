@@ -3,12 +3,8 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.device_registry import DeviceInfo
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
-
 from .const import DOMAIN, CONF_HOST, DEVICE_ID, PRESET_MODES
-from .data_fetcher import ProfiAirTouchData
 from .api import ProfiAirTouchAPI
-
 import logging
 
 _LOGGER = logging.getLogger(__name__)
@@ -18,11 +14,8 @@ FAN_PROFI_AIR = "ventilation_level"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
 #    """Set up Profi-Air Touch Fan"""
-    config = hass.data[DOMAIN][entry.entry_id]
-    host = config[CONF_HOST]
-    session = async_get_clientsession(hass)
-    data_handler = ProfiAirTouchData(f"http://{host}/status.xml", session)
-    api = ProfiAirTouchAPI(host)
+    data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
+    api = ProfiAirTouchAPI(entry.data[CONF_HOST])
     async_add_entities([ProfiAirTouchFan(data_handler, api)], True)
 
 class ProfiAirTouchFan(FanEntity):
