@@ -1,7 +1,7 @@
 {
     "entity": {
         "fan": {
-            "ventilation_level": {
+            "ventilation_system": {
                 "state_attributes": {
                     "preset_mode": {
                         "default": "mdi:fan",
