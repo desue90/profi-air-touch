@@ -9,8 +9,8 @@ CONF_HOST = "host"
 DEVICE_ID = f"{DOMAIN}_ventilation_system"
 
 PRESET_MODES = {
-    1: "feuchteschutz",
-    2: "abwesend",
-    3: "wohnen",
-    4: "party"
+    1: "low",
+    2: "medium",
+    3: "high",
+    4: "boost"
 }

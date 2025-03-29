@@ -17,7 +17,7 @@ This integration allows you to set the ventilation level of your controlled dome
 
 In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation system.
 
-**Remark on level 4 - Party:**
+**Remark on level 4 - boost:**
 The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page.
 
 ## Requirements
@@ -78,10 +78,10 @@ features:
   - style: icons
     type: fan-preset-modes
     preset_modes:
-      - Feuchteschutz
-      - Abwesend
-      - Wohnen
-      - Party
+      - low
+      - medium
+      - high
+      - boost
 type: tile
 entity: fan.profi_air_touch_luftungsstufe
 features_position: bottom
@@ -110,10 +110,10 @@ You can choose any trigger and conditions you need. Let's say you want to set th
 5. Add Action > Fan > Set Preset Mode
 6. Choose your new entity, e.g. "fan.profi_air_touch_luftungsstufe"
 7. Choose one of the following 4 preset modes. You must specify the preset mode as text:
-    - Level 1:  `Feuchteschutz`
-    - Level 2:  `Abwesend`
-    - Level 3:  `Wohnen`
-    - Level 4:  `Party`       [See Remark](#features)
+    - Level 1:  `low`
+    - Level 2:  `medium`
+    - Level 3:  `high`
+    - Level 4:  `boost`       [See Remark](#features)
 8. Save your new automation and give it a name
 
 ### Create Automation via YAML editor
@@ -140,7 +140,7 @@ actions:
   - action: fan.set_preset_mode
     metadata: {}
     data:
-      preset_mode: Feuchteschutz
+      preset_mode: low
     target:
       entity_id: fan.profi_air_touch_luftungsstufe
 mode: single
@@ -150,10 +150,10 @@ mode: single
  - `at:`            Set a time in the format hh:mm:ss
  - `weekday:`       Remove all days on which the automation should not run
  - `preset_mode:`   Set one of the 4 preset modes. You must specify the preset mode as text:
-    - For level 1 take:  `Feuchteschutz`
-    - For level 2 take:  `Abwesend`
-    - For level 3 take:  `Wohnen`
-    - For level 4 take:  `Party`       [See Remark](#features)
+    - For level 1 take:  `low`
+    - For level 2 take:  `medium`
+    - For level 3 take:  `high`
+    - For level 4 take:  `boost`       [See Remark](#features)
  - `entity_id:`     Select your fan entity
 4. Save your new automation 
 

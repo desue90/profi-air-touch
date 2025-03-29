@@ -18,10 +18,10 @@
                 "state_attributes": {
                     "preset_mode": {
                         "state": {
-                            "feuchteschutz": "Feuchteschutz",
-                            "abwesend": "Abwesend",
-                            "wohnen": "Wohnen",
-                            "party": "Party"
+                            "low": "Feuchteschutz",
+                            "medium": "Abwesend",
+                            "high": "Wohnen",
+                            "boost": "Party"
                         }
                     }
                 }
