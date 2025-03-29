@@ -6,7 +6,7 @@ PLATFORMS = [
 
 CONF_HOST = "host"
 
-DEVICE_ID = f"{DOMAIN}_ventilation_system"
+DEVICE_ID = f"{DOMAIN}_device"
 
 PRESET_MODES = {
     1: "low",

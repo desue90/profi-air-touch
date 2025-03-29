@@ -13,8 +13,8 @@
     },
     "entity": {
         "fan":{
-            "ventilation_level": {
-                "name": "Ventilation level",
+            "ventilation_system": {
+                "name": "Ventilation system",
                 "state_attributes": {
                     "preset_mode": {
                         "state": {

@@ -9,11 +9,9 @@ Home Assistant Integration for Fränkische Profi-Air 250/400 Touch
 
 This integration allows you to set the ventilation level of your controlled domestic ventilation via home assistant. This works via the following HTTP request:
 
-`http://{self._host}/stufe.cgi?stufe={preset}`
-
-`{self._host}` = IP address of the ventilation system
-
-`{preset}` = level number 1 to 4
+`http://{self._host}/stufe.cgi?stufe={preset}`  
+`{self._host}` = IP address of the ventilation system  
+`{preset}` = level number 1 to 4  
 
 In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation system.
 

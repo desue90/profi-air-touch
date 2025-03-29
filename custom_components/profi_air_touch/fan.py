@@ -10,7 +10,7 @@ import logging
 _LOGGER = logging.getLogger(__name__)
 
 # Constant for the fan
-FAN_PROFI_AIR = "ventilation_level"
+FAN_PROFI_AIR = "ventilation_system"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
 #    """Set up Profi-Air Touch Fan"""
