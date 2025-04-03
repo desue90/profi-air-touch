@@ -39,6 +39,48 @@
             },
             "exhaust_air_temperature": {
                 "name": "Fortluft Temperatur"
+            },
+            "bypass_auto_outdoor_temp": {
+                "name": "Bypass Automat - Aussenluft Temp."
+            },
+            "bypass_auto_exhaust_temp": {
+                "name": "Bypass Automat - Abluft Temp."
+            },
+            "bypass_control": {
+                "name": "Bypass Steuerung"
+            },
+            "program_manual_control": {
+                "name": "Steuerung"
+            },
+            "language_select": {
+                "name": "Sprache"
+            },
+            "filter_status": {
+                "name": "Filterstatus"
+            },
+            "filter_total_term": {
+                "name": "Gesamtlaufzeit bis Filtertausch"
+            },
+            "filter_residual_term": {
+                "name": "Restlaufzeit bis Filtertausch"
+            },
+            "hours_usage_level_1": {
+                "name": "Betriebsstunden Stufe 1"
+            },
+            "hours_usage_level_2": {
+                "name": "Betriebsstunden Stufe 2"
+            },
+            "hours_usage_level_3": {
+                "name": "Betriebsstunden Stufe 3"
+            },
+            "hours_usage_level_4": {
+                "name": "Betriebsstunden Stufe 4"
+            },
+            "party_timer": {
+                "name": "Party-Stufen Nachlaufzeit"
+            },
+            "mac_address": {
+                "name": "MAC-Adresse"
             }
         }
     }

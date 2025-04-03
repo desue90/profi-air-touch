@@ -39,6 +39,48 @@
             },
             "exhaust_air_temperature": {
                 "name": "Exhaust air temperatur"
+            },
+            "bypass_auto_outdoor_temp": {
+                "name": "Bypass automat - outdoor temp."
+            },
+            "bypass_auto_exhaust_temp": {
+                "name": "Bypass automat - exhaust temp."
+            },
+            "bypass_control": {
+                "name": "Bypass control"
+            },
+            "program_manual_control": {
+                "name": "Control"
+            },
+            "language_select": {
+                "name": "Language"
+            },
+            "filter_status": {
+                "name": "Filter status"
+            },
+            "filter_total_term": {
+                "name": "Total term until filter replacement"
+            },
+            "filter_residual_term": {
+                "name": "Residual term until filter replacement"
+            },
+            "hours_usage_level_1": {
+                "name": "Hours of usage - Level 1"
+            },
+            "hours_usage_level_2": {
+                "name": "Hours of usage - Level 2"
+            },
+            "hours_usage_level_3": {
+                "name": "Hours of usage - Level 3"
+            },
+            "hours_usage_level_4": {
+                "name": "Hours of usage - Level 4"
+            },
+            "party_timer": {
+                "name": "Party-Level timer"
+            },
+            "mac_address": {
+                "name": "MAC-Address"
             }
         }
     }
