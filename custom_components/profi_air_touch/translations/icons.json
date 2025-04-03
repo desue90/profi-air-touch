@@ -14,6 +14,62 @@
                     }
                 }
             }
+        },
+        "sensor": {
+            "fresh_air_temperature": {
+                "default": "mdi:thermometer"
+            },
+            "supply_air_temperature": {
+                "default": "mdi:thermometer"
+            },
+            "extract_air_temperature": {
+                "default": "mdi:thermometer"
+            },
+            "exhaust_air_temperature": {
+                "default": "mdi:thermometer"
+            },
+            "bypass_auto_outdoor_temp": {
+                "default": "mdi:arrow-decision-auto"
+            },
+            "bypass_auto_exhaust_temp": {
+                "default": "mdi:arrow-decision-auto"
+            },
+            "bypass_control": {
+                "default": "mdi:arrow-decision-auto"
+            },
+            "program_manual_control": {
+                "default": "mdi:cogs"
+            },
+            "language_select": {
+                "default": "mdi:translate"
+            },
+            "filter_status": {
+                "default": "mdi:air-filter"
+            },
+            "filter_total_term": {
+                "default": "mdi:air-filter"
+            },
+            "filter_residual_term": {
+                "default": "mdi:air-filter"
+            },
+            "hours_usage_level_1": {
+                "default": "mdi:timer-outline"
+            },
+            "hours_usage_level_2": {
+                "default": "mdi:timer-outline"
+            },
+            "hours_usage_level_3": {
+                "default": "mdi:timer-outline"
+            },
+            "hours_usage_level_4": {
+                "default": "mdi:timer-outline"
+            },
+            "party_timer": {
+                "default": "mdi:clock-outline"
+            },
+            "mac_address": {
+                "default": "mdi:identifier"
+            }
         }
     }
 }

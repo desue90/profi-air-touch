@@ -12,10 +12,10 @@ This integration allows you to set the ventilation level of your controlled dome
 `{self._host}` = IP address of the ventilation system  
 `{preset}` = level number 1 to 4
 
-In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation system.
+In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation systems web interface.
 
 **Remark on level 4 - boost:**
-The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page.
+The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page or in the sensor entity "Party-Level timer".
 
 ## Requirements
 
@@ -53,7 +53,7 @@ You can choose to deploy it with [HACS](#hacs) or [manually](#manual)
 4. Enter the IP address of the ventilation system
 5. Select an area for the ventilation system and finisch the configuration
 
-You now have an entity you can use to set 1 of the 4 available ventilation levels if you meet the [requirements](#requirements) listed above. Therefor add any card in the [dashboard](#dashboard) or create [automations](#automation), e.g. to control the timing of the different levels
+You now have an entity you can use to set 1 of the 4 available ventilation levels if you meet the [requirements](#requirements) listed above. Therefor add any card in the [dashboard](#dashboard) or create [automations](#automation), e.g. to control the timing of the different levels. Aside from that you have several sensor entities with different information about the ventilation system.
 
 ## Dashboard
 
@@ -80,18 +80,19 @@ features:
       - high
       - boost
 type: tile
-entity: fan.profi_air_touch_luftungsstufe
+entity: fan.profi_air_touch_luftungsanlage
 features_position: bottom
 vertical: false
 hide_state: true
 show_entity_picture: false
 ```
-9. Make sure you have the correct entity if yours has a different ID
-10. Save it
+9. Make sure you have the correct entity if yours has a different entity-id
+10. Optional: Give that card a own name by adding `name: Some Custom Name` to the bottom of the code or by further edit the card in visual editor
+11. Save it
 
 ## Automation
 
-You can set the different ventilation levels automatically, e.g. via time control, using automations. To do so, proceed as follows:
+You can set the different ventilation levels automatically, e.g. via time control or by using automations. To do so, proceed as follows:
 1. Go to Settings > Automations & Scenes and select the "Create Automation" button
 2. Select "Create new automation"
 
@@ -105,7 +106,7 @@ You can choose any trigger and conditions you need. Let's say you want to set th
 3. Add Condition > Time and Place > Time
 4. Leave the time fields empty and add only the desired weekdays on which the automation should run
 5. Add Action > Fan > Set Preset Mode
-6. Choose your new entity, e.g. "fan.profi_air_touch_luftungsstufe"
+6. Choose your new fan entity, e.g. "fan.profi_air_touch_luftungsanlage"
 7. Choose one of the following 4 preset modes. You must specify the preset mode as text:
     - Level 1:  `low`
     - Level 2:  `medium`
@@ -139,7 +140,7 @@ actions:
     data:
       preset_mode: low
     target:
-      entity_id: fan.profi_air_touch_luftungsstufe
+      entity_id: fan.profi_air_touch_luftungsanlage
 mode: single
 ```
 3. To customize the automation you can change the following lines:
