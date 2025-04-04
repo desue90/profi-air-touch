@@ -7,6 +7,7 @@
 - [x] Add Icons for the available preset modes, e.g. mdi:fan-speed-1, *-2, *-3 and mdi:rocket:launch, as soon as this feature exists, see: https://community.home-assistant.io/t/new-thermostat-card-preset-icons/652861  
 > [!NOTE]
 > Icons for entity state attributes can be provided according to "Icon Translation" `- Examples include fan modes`, see: https://developers.home-assistant.io/docs/core/entity#icon-translations  
+
 > [!IMPORTANT]
 > I've added an icons.json according to the description, but it doesn't work  
 - [ ] Check why Icon Translation doesn't work
@@ -15,7 +16,7 @@
 
 - [ ] Add connections (type, identifier) - in this case MAC-Address - in device registry
 
-- [ ] Create common.py with BaseEntityClass for common entity stuff like device registry and attributes like _attr_has_entity_name = True
+- [ ] Create common.py with BaseEntityClass for common entity stuff like device registry and attributes like _attr_has_entity_name = True. See: https://developers.home-assistant.io/docs/core/integration-quality-scale/rules/common-modules
 
 - [ ] Add check, if entered IP address is valid
 

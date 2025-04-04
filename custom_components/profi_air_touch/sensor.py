@@ -30,6 +30,7 @@ SENSOR_ENTITIES = {
     #"events": {"Clear faults"}  To Do Ergänzen
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
+    """Set up Profi-Air Touch Sensor Entities"""
     data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
     sensors = [ProfiAirTouchSensor(data_handler, sensor_id, props) for sensor_id, props in SENSOR_ENTITIES.items()]
     # Create sensor entities

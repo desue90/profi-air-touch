@@ -13,7 +13,7 @@ _LOGGER = logging.getLogger(__name__)
 FAN_PROFI_AIR = "ventilation_system"
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
-#    """Set up Profi-Air Touch Fan"""
+    """Set up Profi-Air Touch Fan"""
     data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
     api = ProfiAirTouchAPI(entry.data[CONF_HOST])
     async_add_entities([ProfiAirTouchFan(data_handler, api)], True)
