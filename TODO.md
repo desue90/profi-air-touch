@@ -12,6 +12,8 @@
 > I've added an icons.json according to the description, but it doesn't work  
 - [ ] Check why Icon Translation doesn't work
 
+- [ ] Check if entity "Climate" with HVACMode.FAN_ONLY, HVACAction.FAN, supported_features = PRESET_MODE (or FAN_MODE), PRESETS = ECO, AWAY, HOME, BOOST would be a better alternative to fan entity
+
 - [ ] Firing event when filter need to be replaced, if possible. See: https://developers.home-assistant.io/docs/integration_events/
 
 - [ ] Add connections (type, identifier) - in this case MAC-Address - in device registry
