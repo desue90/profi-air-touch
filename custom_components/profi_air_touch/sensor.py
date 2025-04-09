@@ -11,8 +11,6 @@ SENSOR_ENTITIES = {
     "supply_air_temperature": {"xml_tag": "zul0", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "state_class": SensorStateClass.MEASUREMENT, "icon": "mdi:thermometer"},
     "extract_air_temperature": {"xml_tag": "abl0", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "state_class": SensorStateClass.MEASUREMENT, "icon": "mdi:thermometer"},
     "exhaust_air_temperature": {"xml_tag": "fol0", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "state_class": SensorStateClass.MEASUREMENT, "icon": "mdi:thermometer"},
-    "bypass_auto_outdoor_temp": {"xml_tag": "BipaAutAUL", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "icon": "mdi:arrow-decision-auto"},
-    "bypass_auto_exhaust_temp": {"xml_tag": "BipaAutABL", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "icon": "mdi:arrow-decision-auto"},
     "bypass_control": {"xml_tag": "bypass", "icon": "mdi:arrow-decision-auto"},
     "program_manual_control": {"xml_tag": "control0", "icon": "mdi:cogs"},
     "language_select": {"xml_tag": "SprachWahl", "icon": "mdi:translate"},
@@ -23,14 +21,10 @@ SENSOR_ENTITIES = {
     "hours_usage_level_2": {"xml_tag": "BsSt2", "unit": UnitOfTime.HOURS, "icon": "mdi:timer-outline"},
     "hours_usage_level_3": {"xml_tag": "BsSt3", "unit": UnitOfTime.HOURS, "icon": "mdi:timer-outline"},
     "hours_usage_level_4": {"xml_tag": "BsSt4", "unit": UnitOfTime.HOURS, "icon": "mdi:timer-outline"},
-    "party_timer": {"xml_tag": "partytime", "unit": UnitOfTime.MINUTES, "icon": "mdi:clock-outline"},
     "mac_address": {"xml_tag": "config_mac", "icon": "mdi:identifier"},
 }
 
-    #"events": {"Clear faults"}  To Do Ergänzen
-
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
-    """Set up Profi-Air Touch Sensor Entities"""
     data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
     sensors = [ProfiAirTouchSensor(data_handler, sensor_id, props) for sensor_id, props in SENSOR_ENTITIES.items()]
     # Create sensor entities
@@ -61,4 +55,5 @@ class ProfiAirTouchSensor(SensorEntity):
         )
 
     async def async_update(self):
+        """Update internal state from data handler."""
         self._attr_native_value = self._data_handler.data.get(self._xml_tag)

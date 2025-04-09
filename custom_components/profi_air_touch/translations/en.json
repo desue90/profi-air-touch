@@ -27,6 +27,17 @@
                 }
             } 
         },
+        "number": {
+            "bypass_auto_outdoor_temp": {
+                "name": "Bypass automat - outdoor temp."
+            },
+            "bypass_auto_exhaust_temp": {
+                "name": "Bypass automat - exhaust temp."
+            },
+            "party_timer": {
+                "name": "Party-Level timer"
+            }
+        },
         "sensor": {
             "fresh_air_temperature": {
                 "name": "Fresh air temperatur"
@@ -39,12 +50,6 @@
             },
             "exhaust_air_temperature": {
                 "name": "Exhaust air temperatur"
-            },
-            "bypass_auto_outdoor_temp": {
-                "name": "Bypass automat - outdoor temp."
-            },
-            "bypass_auto_exhaust_temp": {
-                "name": "Bypass automat - exhaust temp."
             },
             "bypass_control": {
                 "name": "Bypass control"
@@ -75,9 +80,6 @@
             },
             "hours_usage_level_4": {
                 "name": "Hours of usage - Level 4"
-            },
-            "party_timer": {
-                "name": "Party-Level timer"
             },
             "mac_address": {
                 "name": "MAC-Address"

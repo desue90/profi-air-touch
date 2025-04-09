@@ -1,7 +1,7 @@
 {
   "domain": "profi_air_touch",
   "name": "Profi-Air Touch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "integration_type": "device",
   "documentation": "https://github.com/desue90/profi-air-touch",
   "issue_tracker": "https://github.com/desue90/profi-air-touch/issues",

@@ -49,11 +49,12 @@ class ProfiAirTouchFan(FanEntity):
             _LOGGER.warning("Unvalid Preset-Mode: %s", preset_mode)
             return
         # Perform the API-Request, to set the preset mode
-        success = await self._api.async_set_fan_preset(key)
+        success = await self._api.async_set_fan_preset_mode(key)
         if not success:
             _LOGGER.error("Error at setting preset mode: %s", preset_mode)
 
     async def async_update(self):
+        """Update internal state from data handler."""
         await self._data_handler.update_status_xml()
         fan_level = self._data_handler.get_fan_level()
         self._attr_preset_mode = PRESET_MODES.get(fan_level, None)

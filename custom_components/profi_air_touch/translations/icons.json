@@ -15,6 +15,17 @@
                 }
             }
         },
+        "number": {
+            "bypass_auto_outdoor_temp": {
+                "default": "mdi:thermometer-chevron-down"
+            },
+            "bypass_auto_exhaust_temp": {
+                "default": "mdi:thermometer-chevron-up"
+            },
+            "party_timer": {
+                "default": "mdi:clock-outline"
+            }
+        },
         "sensor": {
             "fresh_air_temperature": {
                 "default": "mdi:thermometer"
@@ -27,12 +38,6 @@
             },
             "exhaust_air_temperature": {
                 "default": "mdi:thermometer"
-            },
-            "bypass_auto_outdoor_temp": {
-                "default": "mdi:arrow-decision-auto"
-            },
-            "bypass_auto_exhaust_temp": {
-                "default": "mdi:arrow-decision-auto"
             },
             "bypass_control": {
                 "default": "mdi:arrow-decision-auto"
@@ -63,9 +68,6 @@
             },
             "hours_usage_level_4": {
                 "default": "mdi:timer-outline"
-            },
-            "party_timer": {
-                "default": "mdi:clock-outline"
             },
             "mac_address": {
                 "default": "mdi:identifier"
