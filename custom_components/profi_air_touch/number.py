@@ -4,8 +4,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.device_registry import DeviceInfo
-from .const import DOMAIN, CONF_HOST, DEVICE_ID
-from .api import ProfiAirTouchAPI
+from .const import DOMAIN, DEVICE_ID
 import logging
 
 _LOGGER = logging.getLogger(__name__)
@@ -15,6 +14,7 @@ NUMBER_ENTITIES = {
         "xml_tag": "BipaAutAUL",
         "post_data": "ChangeBPAL",
         "icon": "mdi:thermometer-chevron-down",
+        "mode": "auto",
         "min_value": 13,
         "max_value": 18,
         "step": 1,
@@ -25,6 +25,7 @@ NUMBER_ENTITIES = {
         "xml_tag": "BipaAutABL",
         "post_data": "ChangeBPAB",
         "icon": "mdi:thermometer-chevron-up",
+        "mode": "auto",
         "min_value": 18,
         "max_value": 28,
         "step": 1,
@@ -35,9 +36,10 @@ NUMBER_ENTITIES = {
         "xml_tag": "partytime",
         "post_data": "ChangeMinutes",
         "icon": "mdi:clock-outline",
+        "mode": "auto",
         "min_value": 10,
         "max_value": 240,
-        "step": 1,
+        "step": 5,  #1 is possible but not practical for slider
         "unit": UnitOfTime.MINUTES,
         "device_class": NumberDeviceClass.DURATION
     },
@@ -45,7 +47,7 @@ NUMBER_ENTITIES = {
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
     data_handler = hass.data[DOMAIN][entry.entry_id]["data_handler"]
-    api = ProfiAirTouchAPI(entry.data[CONF_HOST])
+    api = hass.data[DOMAIN][entry.entry_id]["api"]
     number = [ProfiAirTouchNumber(data_handler, api, sensor_id, props) for sensor_id, props in NUMBER_ENTITIES.items()]
     # Create number entities
     async_add_entities(number)
@@ -62,7 +64,7 @@ class ProfiAirTouchNumber(NumberEntity):
         self._xml_tag = props.get("xml_tag")
         self._post_data = props.get("post_data")
         self._attr_icon = props.get("icon")
-        #self._attr_mode = "box" or "slider" or the default "auto"
+        self._attr_mode = props.get("mode")
         self._attr_native_min_value = props.get("min_value")
         self._attr_native_max_value = props.get("max_value")
         self._attr_native_step = props.get("step")

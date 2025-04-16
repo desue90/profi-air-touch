@@ -3,6 +3,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from .const import DOMAIN, PLATFORMS, CONF_HOST
 from .data_fetcher import ProfiAirTouchData
+from .api import ProfiAirTouchAPI
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Profi-Air Touch from a config entry."""
@@ -11,10 +12,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     host = config[CONF_HOST]
     session = async_get_clientsession(hass)
     data_handler = ProfiAirTouchData(f"http://{host}/status.xml", session)
+    api = ProfiAirTouchAPI(host, session)
     await data_handler.update_status_xml()  # First update to get initial data
     hass.data[DOMAIN][entry.entry_id] = {
         "config": config,
         "data_handler": data_handler,
+        "api": api,
     }
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
