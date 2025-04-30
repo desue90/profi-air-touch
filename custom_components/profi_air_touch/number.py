@@ -12,7 +12,7 @@ _LOGGER = logging.getLogger(__name__)
 NUMBER_ENTITIES = {
     "bypass_auto_outdoor_temp": {
         "xml_tag": "BipaAutAUL",
-        "post_data": "ChangeBPAL",
+        "post_key": "ChangeBPAL",
         "icon": "mdi:thermometer-chevron-down",
         "mode": "auto",
         "min_value": 13,
@@ -23,7 +23,7 @@ NUMBER_ENTITIES = {
     },
     "bypass_auto_exhaust_temp": {
         "xml_tag": "BipaAutABL",
-        "post_data": "ChangeBPAB",
+        "post_key": "ChangeBPAB",
         "icon": "mdi:thermometer-chevron-up",
         "mode": "auto",
         "min_value": 18,
@@ -34,12 +34,12 @@ NUMBER_ENTITIES = {
     },
     "party_timer": {
         "xml_tag": "partytime",
-        "post_data": "ChangeMinutes",
+        "post_key": "ChangeMinutes",
         "icon": "mdi:clock-outline",
         "mode": "auto",
         "min_value": 10,
         "max_value": 240,
-        "step": 5,  #1 is possible but not practical for slider
+        "step": 5,  # 1 is possible but not practical for slider
         "unit": UnitOfTime.MINUTES,
         "device_class": NumberDeviceClass.DURATION
     },
@@ -62,7 +62,7 @@ class ProfiAirTouchNumber(NumberEntity):
         self._data_handler = data_handler
         self._api = api
         self._xml_tag = props.get("xml_tag")
-        self._post_data = props.get("post_data")
+        self._post_key = props.get("post_key")
         self._attr_icon = props.get("icon")
         self._attr_mode = props.get("mode")
         self._attr_native_min_value = props.get("min_value")
@@ -83,10 +83,11 @@ class ProfiAirTouchNumber(NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         """Update the current value."""
-        success = await self._api.async_set_number_native_value(self._post_data, value)
+        success = await self._api.async_set_number_native_value(self._post_key, value)
         if not success:
-            _LOGGER.error("Failed to set value for %s: %s", self._post_data, value)
-
+            _LOGGER.error("Failed to set value for %s: %s", self._post_key, value)
+        else:
+            await self._data_handler.update_status_xml() # Necessary for faster status updates after change (Use DataUpdateCoordinator in the future)
 
     async def async_update(self):
         """Update internal state from data handler."""

@@ -38,6 +38,33 @@
                 "name": "Party-Level timer"
             }
         },
+        "select": {
+            "bypass_control": {
+                "name": "Bypass control",
+                "state": {
+                    "bypa0": "Manual open",
+                    "bypa1": "Manual close",
+                    "bypa2": "Automatic"
+                }
+            },
+            "program_manual_control": {
+                "name": "Control",
+                "state": {
+                    "1": "Programm",
+                    "0": "Manual"
+                }
+            },
+            "language_select": {
+                "name": "Language",
+                "state": {
+                    "lang1": "German",
+                    "lang2": "English",
+                    "lang3": "French",
+                    "lang4": "Italian",
+                    "lang5": "Flemish"
+                }
+            }
+        },
         "sensor": {
             "fresh_air_temperature": {
                 "name": "Fresh air temperatur"
@@ -53,12 +80,6 @@
             },
             "bypass_control": {
                 "name": "Bypass control"
-            },
-            "program_manual_control": {
-                "name": "Control"
-            },
-            "language_select": {
-                "name": "Language"
             },
             "filter_status": {
                 "name": "Filter status"

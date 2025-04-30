@@ -1,8 +1,17 @@
 # ToDo
 
-- [ ] Remove Turn On/Off from Entity (at the moment this is displayed, but don't know why)
 
-- [ ] Check if it's possible to send http requests to change things like party-level timer, bypass control, bypass automat temperatures, language, clear faults, change control (program or manual) and create a select entity out of it
+- [ ] Get software-version and -release from "About" page
+
+- [ ] Add select entity for summer-/wintertime:
+      Wintertime    : soze0
+      Summertime +1h: soze1
+
+- [ ] Add "events": {"Clear faults"}:
+      onclick="newAJAXCommand('filter.cgi?filter=1')
+- [ ] Check if it's possible to send http requests to change things like clear faults and create a select entity out of it
+
+- [ ] Remove Turn On/Off from Entity (at the moment this is displayed, but don't know why)
 
 - [x] Add Icons for the available preset modes, e.g. mdi:fan-speed-1, *-2, *-3 and mdi:rocket:launch, as soon as this feature exists, see: https://community.home-assistant.io/t/new-thermostat-card-preset-icons/652861  
 > [!NOTE]
@@ -28,3 +37,11 @@
 https://developers.home-assistant.io/docs/integration_fetching_data/#coordinated-single-api-poll-for-data-for-all-entities
 
 - [ ] Update README.md to new version updates
+
+- [ ] On page "setup" it could be possible to change "Sensors" ON/OFF:
+      onclick="newAJAXCommand('sensor.cgi?sensor=1') for ON
+      onclick="newAJAXCommand('sensor.cgi?sensor=0') for OFF
+
+- [ ] It should be possible to send client time to airCloud. Maybe add this one too
+
+- [ ] Maybe add party_timer_rest_time as a sensor entity

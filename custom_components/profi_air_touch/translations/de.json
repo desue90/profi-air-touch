@@ -38,6 +38,33 @@
                 "name": "Party-Stufen Nachlaufzeit"
             }
         },
+        "select": {
+            "bypass_control": {
+                "name": "Bypass Steuerung",
+                "state": {
+                    "bypa0": "Manuell Offen",
+                    "bypa1": "Manuell Zu",
+                    "bypa2": "Automatisch"
+                }
+            },
+            "program_manual_control": {
+                "name": "Steuerung",
+                "state": {
+                    "1": "Programm",
+                    "0": "Hand"
+                }
+            },
+            "language_select": {
+                "name": "Sprache",
+                "state": {
+                    "lang1": "Deutsch",
+                    "lang2": "Englisch",
+                    "lang3": "Französisch",
+                    "lang4": "Italienisch",
+                    "lang5": "Flämisch"
+                }
+            }
+        },
         "sensor": {
             "fresh_air_temperature": {
                 "name": "Aussenluft Temperatur"
@@ -53,12 +80,6 @@
             },
             "bypass_control": {
                 "name": "Bypass Steuerung"
-            },
-            "program_manual_control": {
-                "name": "Steuerung"
-            },
-            "language_select": {
-                "name": "Sprache"
             },
             "filter_status": {
                 "name": "Filterstatus"

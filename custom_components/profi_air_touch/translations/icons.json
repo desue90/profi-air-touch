@@ -26,6 +26,17 @@
                 "default": "mdi:clock-outline"
             }
         },
+        "select": {
+            "bypass_control": {
+                "default": "mdi:arrow-decision-auto"
+            },
+            "program_manual_control": {
+                "default": "mdi:cogs"
+            },
+            "language_select": {
+                "default": "mdi:translate"
+            }
+        },
         "sensor": {
             "fresh_air_temperature": {
                 "default": "mdi:thermometer"
@@ -41,12 +52,6 @@
             },
             "bypass_control": {
                 "default": "mdi:arrow-decision-auto"
-            },
-            "program_manual_control": {
-                "default": "mdi:cogs"
-            },
-            "language_select": {
-                "default": "mdi:translate"
             },
             "filter_status": {
                 "default": "mdi:air-filter"

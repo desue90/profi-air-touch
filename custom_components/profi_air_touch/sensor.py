@@ -12,8 +12,6 @@ SENSOR_ENTITIES = {
     "extract_air_temperature": {"xml_tag": "abl0", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "state_class": SensorStateClass.MEASUREMENT, "icon": "mdi:thermometer"},
     "exhaust_air_temperature": {"xml_tag": "fol0", "unit": UnitOfTemperature.CELSIUS, "device_class": SensorDeviceClass.TEMPERATURE, "state_class": SensorStateClass.MEASUREMENT, "icon": "mdi:thermometer"},
     "bypass_control": {"xml_tag": "bypass", "icon": "mdi:arrow-decision-auto"},
-    "program_manual_control": {"xml_tag": "control0", "icon": "mdi:cogs"},
-    "language_select": {"xml_tag": "SprachWahl", "icon": "mdi:translate"},
     "filter_status": {"xml_tag": "filter0", "icon": "mdi:air-filter"},
     "filter_total_term": {"xml_tag": "filtertime", "unit": UnitOfTime.DAYS, "icon": "mdi:air-filter"},
     "filter_residual_term": {"xml_tag": "rest_time", "unit": UnitOfTime.DAYS, "icon": "mdi:air-filter"},

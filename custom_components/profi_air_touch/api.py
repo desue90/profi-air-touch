@@ -23,7 +23,7 @@ class ProfiAirTouchAPI:
             return False
 
     async def async_set_number_native_value(self, post_key: str, value: float) -> bool:
-        """Send JSON POST to set a number value on setup.htm."""
+        """Send POST request to set a number value on setup.htm."""
         setup_url = f"http://{self._host}/setup.htm"
         data = {post_key: int(value)}
         headers = {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -36,4 +36,20 @@ class ProfiAirTouchAPI:
                     return False
         except ClientError as e:
             _LOGGER.error("Error in POST to %s: %s", setup_url, e)
+            return False
+
+    async def async_set_select_option(self, post_key: str, post_url: str, option: str) -> bool:
+        """Send POST request to set an option on setup.htm."""
+        url = f"http://{self._host}/{post_url}"
+        data = {post_key: option}
+        headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+        try:
+            async with self._session.post(url, data=data, headers=headers, timeout=5) as response:
+                if response.status in (200, 302):
+                    return True
+                else:
+                    _LOGGER.warning("Unexpected response code: %d for payload %s", response.status, data)
+                    return False
+        except ClientError as e:
+            _LOGGER.error("Error in POST to %s: %s", url, e)
             return False

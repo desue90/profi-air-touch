@@ -2,6 +2,7 @@ DOMAIN = "profi_air_touch"
 PLATFORMS = [
     "fan",
     "number",
+    "select",
     "sensor"
     ]
 

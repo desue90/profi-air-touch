@@ -5,23 +5,39 @@
 
 Home Assistant Integration for Fränkische Profi-Air 250/400 Touch
 
+> [!CAUTION]
+> This Integration is tested with the model
+> Profi-Air 400 Touch (Software-Version: 15-06-22)
+> Since 400 Touch and 250 Touch share the same manual,
+> I assume that they are identical and that the
+> 250 Touch model works the same way
+
+
+> [!WARNING]
+> Other models are not supported!
+
+
+> [!NOTE]
+> English and German are fully supported.
+> For other languages, I assume that, among other things,
+> the select entities are not displayed correctly.
+
+
 ## Features
 
-This integration allows you to set the ventilation level of your controlled domestic ventilation via home assistant. This works via the following HTTP request:  
-`http://{self._host}/stufe.cgi?stufe={preset}`  
-`{self._host}` = IP address of the ventilation system  
-`{preset}` = level number 1 to 4
-
-In addition, this integration provides certain sensors such as temperature values ​​that are read from the status.xml file of the ventilation systems web interface.
-
-**Remark on level 4 - boost:**
-The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page or in the sensor entity "Party-Level timer".
+This integration allows you to monitor and control your Profi-Air 250/400 Touch via home assistant.
+The most important feature is the control of the ventilation level. This means that ventilation can not only be controlled by time, but also automated by events of other smart home devices, such as a room air sensor.
+In addition, this integration provides certain sensors, such as temperature values, and other entities for setting different values.
+Therefor this integration uses the ventilation system's web interface.
 
 ## Requirements
 
 The following requirements must be met:
 * The ventilation system must be connected to the home network and accessible via a fixed IP address
-* The "Control" must be set to "manual". You can do this, for example, via the web interface on the page "Week Schedule"
+* To be able to control the ventilation level via Home Assistant, the "Control" must be set to "manual". You can do this, for example, via the web interface on the page "Week Schedule" or with the corresponding select entity of this integration
+
+## Remark on level 4 - boost
+The highest level is time-controlled, meaning that after a certain time, the ventilation system automatically resets to the previous level. This set time can be found in the web interface of the ventilation system on the "Setup" page or in the sensor entity "Party-Level timer".
 
 ## Installation
 
@@ -154,10 +170,6 @@ mode: single
     - For level 4 take:  `boost`       [See Remark](#features)
  - `entity_id:`     Select your fan entity
 4. Save your new automation 
-
-## Tested Setup
-
-* Fränkische Profi-Air 400 Touch
 
 ## Contribute
 
