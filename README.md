@@ -7,8 +7,7 @@ Home Assistant Integration for Fränkische Profi-Air 250/400 Touch
 
 > [!CAUTION]
 > This Integration is tested with the model Profi-Air 400 Touch (Software-Version: 15-06-22)  
-> Since 400 Touch and 250 Touch share the same manual, I assume that they are identical  
-> and that the 250 Touch model works the same way  
+> Since 400 Touch and 250 Touch share the same manual, I assume that they are identical and that the 250 Touch model works the same way  
 
 > [!WARNING]
 > Other models are not supported!  
